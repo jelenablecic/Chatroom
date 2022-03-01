@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  background-image: url("img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.doc {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  position: relative;
+}
+
+.doc .nav {
+  width: 20%;
+  height: 504px;
+  background-color: rgb(75, 72, 77);
+  float: left;
+  padding: 5px;
+  border-radius: 30px;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.doc .nav .btn {
+  display: block;
+}
+
+/* Btn room */
+
+.btn {
+  background-color: white;
+  color: #000000;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #030303;
+  color: white;
+  font-weight: bold;
+}
+
+/* Text */
+section {
+  border: 3px dashed #000000;
+  width: 75%;
+  margin: 5px 80px;
+  border-radius: 10px;
+  /* background-color: #ffffff; */
+  height: 400px;
+  overflow: scroll;
+  margin: 7px auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+section::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  display: table;
+  background-color: #656865;
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Left right chat and img */
+.left {
+  margin-right: auto;
+  background-color: rgb(129, 129, 125);
+  border-radius: 10px 10px 10px 0px;
+}
+
+.right {
+  margin-left: auto;
+  background-color: rgb(100, 100, 100);
+  border-radius: 10px 10px 0px 10px;
+}
+
+img {
+  width: 20px;
+  height: 15px;
+  float: right;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  color: #ced3ce;
+  text-align: center;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Usrename */
+
+.user {
+  position: relative;
+  float: right;
+  margin-top: 5px;
+  margin-bottom: 4px;
+  margin-right: 15px;
+}
+
+.user #inputUpdate {
+  margin-right: 5px;
+  border-radius: 10px;
+  height: 30px;
+  padding: 2px;
+}
+
+.user #btnUpdate {
+  border-radius: 10px;
+  height: 30px;
+  width: 70px;
+  padding: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+  background-color: gray;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Message */
+.msg {
+  display: block;
+}
+.msg #inputSend {
+  border-radius: 10px;
+  vertical-align: middle;
+  height: 27px;
+  width: 62.5%;
+  padding: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+.msg #btnSend {
+  border-radius: 10px;
+  height: 30px;
+  width: 15%;
+  padding: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+  background-color: gray;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Time */
+
+.time {
+  display: block;
+}
+
+.time #f {
+  border-radius: 10px;
+  height: 0px;
+  width: 31%;
+  height: 30px;
+  padding: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.time #s {
+  border-radius: 10px;
+  height: 0px;
+  width: 31%;
+  height: 30px;
+  padding: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.time #btnSet {
+  border-radius: 10px;
+  height: 30px;
+  width: 15%;
+  padding: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+  background-color: gray;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* color */
+
+.color #colorPicker {
+  height: 32px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: gray;
+  color: #000000;
+  font-weight: bold;
+  font-family: "Lucida Console", Courier, monospace;
+  margin: 2px;
+}
+
+.color #btnColor {
+  height: 32px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: gray;
+  color: #000000;
+  font-weight: bold;
+  font-family: "Lucida Console", Courier, monospace;
+  margin: 2px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-style: oblique;
+}
+
+#updateUsername {
+  display: none;
+  height: 160px;
+  width: 160px;
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(75, 72, 77);
+  z-index: 150;
+  border-radius: 50%;
+  text-align: center;
+  text-align-last: center;
+  padding: 60px 0;
+  font-style: oblique;
+  font-weight: bold;
+  color: white;
+}
+
+.thisRoom {
+  background-color: rgb(100, 100, 100);
+}
+
+input {
+  cursor: pointer;
+}
+
+#inputUpdate {
+  cursor: auto;
+}
+
+/* Responsiv */
+
+@media only screen and (max-width: 850px) {
+  body {
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    background-image: url("img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+  }
+
+  .doc {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .doc .nav {
+    width: 100%;
+    height: 370px;
+    background-color: rgba(75, 72, 77, 0);
+  }
+
+  .doc .nav .btn {
+    display: block;
+  }
+
+  /* Btn room */
+
+  .btn {
+    width: 100%;
+  }
+
+  /* Text */
+  section {
+    width: 100%;
+  }
+
+  /* Usrename */
+
+  .user {
+    margin-top: 5px;
+    margin-bottom: 4px;
+  }
+
+  .user #inputUpdate {
+    margin-right: 5px;
+    border-radius: 10px;
+    height: 30px;
+    padding: 2px;
+  }
+
+  .user #btnUpdate {
+    width: 70px;
+  }
+
+  /* Message */
+
+  .msg #inputSend {
+    width: 80%;
+  }
+  .msg #btnSend {
+    width: 18%;
+  }
+
+  /* Time */
+
+  .time #f {
+    width: 35%;
+  }
+  .time #s {
+    width: 35%;
+  }
+
+  .time #btnSet {
+    width: 27%;
+  }
+
+  /* color */
+
+  .color #colorPicker {
+    width: 100%;
+  }
+
+  .color #btnColor {
+    width: 100%;
+  }
+
+  .p {
+    color: white;
+  }
+}

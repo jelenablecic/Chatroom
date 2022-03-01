@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITBootcamp Chat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <div>
+    <header>
+      <h1>ITBootcamp Chat</h1>
+      <h2> Hello everyone!</h2>
+    </header>
+    <div class="doc">
+      <div id="updateUsername"></div>
+
+      <div class="nav">
+        <h3 class="p">Choose room</h3>
+        <div class="allBtn">
+        <button class="btn" id="general">#general</button>
+        <button class="btn" id="js">#js</button>
+        <button class="btn" id="homeworks">#homeworks</button>
+        <button class="btn" id="tests">#tests</button>
+      </div>
+
+      <div class="color">
+        <h3>Choose room color</h3>
+        <input type="color" id="colorPicker" class="inp" value="#FFFFFF" />
+        <br />
+        <input
+          type="submit"
+          value="Update color"
+          class="inpsub"
+          id="btnColor"
+        />
+      </div>
+</div>
+      <div class="user">
+        <input
+          type="text"
+          placeholder="Update username"
+          class="inp"
+          id="inputUpdate"
+        />
+        <input type="submit" value="Update" class="inpsub" id="btnUpdate" />
+      </div>
+
+      <section id="sec">
+        <ul ></ul>
+      </section>
+
+      <div class="msg">
+        <textarea
+          type="text"
+          placeholder="Your message..."
+          class="inp"
+          id="inputSend"
+        ></textarea>
+        <input type="submit" value="Send" class="inpsub" id="btnSend" />
+      </div>
+      <div class="time">
+        <input type="datetime-local" id="f" />
+        <input type="datetime-local" id="s" />
+        <input type="submit" id="btnSet" value="Set dates" />
+      </div>
+    </div>
+
+    <!-- Povezivanje sa firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBF6-msyUKwrFYqKRoBdnwCQOO0PvrcCE4",
+        authDomain: "itbootcamp-e4bc9.firebaseapp.com",
+        projectId: "itbootcamp-e4bc9",
+        storageBucket: "itbootcamp-e4bc9.appspot.com",
+        messagingSenderId: "543592380683",
+        appId: "1:543592380683:web:96ec7ca1f3052875154a0e",
+        measurementId: "G-YXJVQDQCKB",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore();
+    </script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
